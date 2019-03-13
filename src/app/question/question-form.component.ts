@@ -5,7 +5,12 @@ import icons from './icons';
 
 @Component ({
     selector: 'app-question-form',
-    templateUrl: './question-form.component.html'
+    templateUrl: './question-form.component.html',
+    styles: [` 
+        i {
+            font-size: 40px;
+        }
+    `]
 })
 
 export class QuestionFormComponent {
@@ -28,7 +33,7 @@ export class QuestionFormComponent {
             form.value.title,
             form.value.description,
             new Date(),
-            'none'
+            form.value.icon
         );
 
         console.log(q);
